@@ -21,6 +21,7 @@
 - Question Asking Hours
     - School Hours 9:00 am - 6:00 pm
     - Lunch 12:30 - 1:30
+- [Parking Lot Slack Channel](https://join.slack.com/share/zt-e1x54s13-sduKVsgke2bCMi6R0QFxDQ)
 - Break Out Sessions
 
 
