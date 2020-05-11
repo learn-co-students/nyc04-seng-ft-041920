@@ -1,5 +1,7 @@
 # Welcome to MOD 1!
 
+![puppy coding](pics/puppy-coding.jpeg)
+
 ## Lectures
 - Participation
 - Labs/Pacing
@@ -36,7 +38,9 @@
 
 ___
 
-## Ruby Gems
+<!-- ![Ruby Gem](pics/gem.png =250x) -->
+
+## [Ruby Gems](https://rubygems.org/)
 
 Ruby gems are collections of ruby code that somebody else wrote that we can use inside of our projects.
 
@@ -44,7 +48,11 @@ Ruby gems are collections of ruby code that somebody else wrote that we can use 
 
     `gem install gem-name`
 
-## RSpec
+
+<img src="pics/gem.png" alt="Ruby Gem" width="200"/>
+
+
+## [RSpec](https://rspec.info/)
 
 Rscpec is a Ruby gem specifically for writing tests for our Ruby code.
 
@@ -52,10 +60,18 @@ Rscpec is a Ruby gem specifically for writing tests for our Ruby code.
     - `learn` runs `rspec` under the hood
 - `rspec --fail-fast` - will run the tests until one test fails
 
+<img src="pics/rspec.png" alt="Ruby Gem" width="200"/>
+
+
+
 
 ## Break Out Room Exercise
 
 [REPL Link](https://repl.it/@BrendaMichelle1/Enumerable-Practice)
+
+<!-- ![puppy coding](pics/puppy-coding2.jpg) -->
+<img src="pics/puppy-coding2.jpg" alt="Ruby Gem" width="300"/>
+
 
 
 ---
