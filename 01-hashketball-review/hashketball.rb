@@ -127,4 +127,29 @@ def game_hash
   }
 end
 
-# Write code here
+
+def all_players
+  game_hash.map do |location, attributes|
+    attributes[:players]
+  end.flatten
+end
+
+def player (player_name)
+  all_players.find do |player_hash|
+    player_hash[:player_name] == player_name
+  end
+end
+
+
+def num_points_scored (player_name)
+  player(player_name)[:points]
+end
+
+def shoe_size (player_name)
+  player(player_name)[:shoe]
+end
+
+num_points_scored("Reggie Evans")
+
+
+
