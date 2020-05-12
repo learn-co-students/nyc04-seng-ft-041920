@@ -8,7 +8,7 @@
 4. Pass arguments to new by defining an `initialize` method in class
 5. Define attribute readers and writers using `attr_` macros
 6. Use instance and class variables appropriately
-7. Call methods on the implicit or explicit `self`
+7. Use `self` for both class and instance appropriately
 8. Get more practice with array compositions (`each`, `map`, `select`, `find`)
 
 
