@@ -36,10 +36,11 @@ What do the following mean in plain English? How about in programming?
 <summary>Domain</summary>
 <pre>Set of possible values within a realm; Domain name - string that defines a realm within the internet (ex. youtube.com, facebook.com)
 
-* Youtube - videos, comments, users, subscriptions
+* Youtube - videos, comments, users, subscriptions, views, likes
     - video has many comments, comment belongs to one video
 
-* Twitter - 
+* Twitter - tweets, users, hashtags, images, messages
+    - one user can make many tweets, one tweet belongs to one user
 </pre>
 </details>
 </p>
