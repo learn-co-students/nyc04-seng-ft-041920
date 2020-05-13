@@ -109,7 +109,7 @@ examples:
 <li>A performer has many albums</li>
 <li>A video has many comments</li>
 <li>A user has many tweets</li>
-<li>A doctor has many patients</li>
+<li>A primary care doctor has many patients</li>
 </ul>
 </pre>
 </details>
