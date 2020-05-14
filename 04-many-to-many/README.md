@@ -1,6 +1,8 @@
 # Many to Many Relationships
 
-![alt text](pics/the-office-cast.jpg "temp")
+<!-- ![alt text](pics/the-office-cast.jpg "temp") -->
+<img src="pics/the-office-cast.jpg" alt="drawing" width="400"/>
+
 
 #### SWBATs:
 1. Implement both sides of a many to many relationship
