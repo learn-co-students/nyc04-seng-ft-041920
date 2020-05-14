@@ -11,7 +11,7 @@
 4. Demonstrate **Single Source of Truth** by not storing one object in multiple collections
 
 
-![alt text](pics/dwights.png "temp")
+![alt text](pics/What-Should-I-Name-My-Class.png "temp")
 ______
 
 When we think about what entities we want to model in our programs, it's important to think about their relationships to each other. Yesterday, we talked about one to many relationships. 
