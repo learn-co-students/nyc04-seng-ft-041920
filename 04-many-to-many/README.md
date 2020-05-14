@@ -1,7 +1,7 @@
 # Many to Many Relationships
 
 <!-- ![alt text](pics/the-office-cast.jpg "temp") -->
-<img src="pics/the-office-cast.jpg" alt="drawing" width="400"/>
+<img src="pics/the-office-cast.jpg" alt="drawing" width="600"/>
 
 
 #### SWBATs:
