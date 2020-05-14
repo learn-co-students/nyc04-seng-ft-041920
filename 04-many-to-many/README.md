@@ -30,6 +30,10 @@ When we think about what entities we want to model in our programs, it's importa
 
     League -< Team -< Player
 
+    Country -< State -< City
+
+   Ceremony -< Particpant -< Award 
+
 
 
 
@@ -44,7 +48,11 @@ When we think about what entities we want to model in our programs, it's importa
 
 Another example we can think of is the relationship between doctor and patient entities. A doctor can have many patients and a patient can see many doctors. A doctor may not know who their patients are directly, but through appointments, they'll know. Likewise, through an appointment, a patient knows information about their doctor.
 
+Doctor -< Appointment >- Patient
+
 The purpose of the class through which the two classes are joined is to store a record for each of the combinations of these other two classes. You can think of this class as a place to store information or attributes of the relationships between the two entities.
+
+
 <p>
 <details>
 <summary> What are some other examples of many to many relationships?</summary>
@@ -53,6 +61,12 @@ The purpose of the class through which the two classes are joined is to store a 
 <li>SocialMediaSite -< Account >- User</li>
 <li>Student -< Enrollment >- Course </li>
 <li>Applicant -< Interview >- Interviewer </li>
+<li>Highway -< Ride/Drive >- Car </li>
+<li>Bus -< Ticket >- Passenger </li>
+<li>Landlord -< Property >- Tenenant </li>
+<li>Building -< Apartment >- Landlord </li>
+<li>NailTechnician -< Appointment >- Customer</li>
+<li>Company -< Product >- Client</li>
 </ul>
 </pre>
 </details>
@@ -60,7 +74,6 @@ The purpose of the class through which the two classes are joined is to store a 
 
 ___
 
-<!-- ![listening meme](pics/listening-meme.jpg) -->
 <img src="pics/listening-meme.jpg" alt="drawing" width="400"/>
 
 
@@ -83,9 +96,77 @@ In the Applicant -< Interview >- Interviewer, we have three classes - `Applicant
 
 ___
 
-### What are the steps we took to create the many to many relationship above?
+### What are the steps we took to create the many to many relationship between an Interviewer and an Applicant through an Interview?
 
-...
+1. Create Applicant Class
+    - Implement single source of truth
+        - `@@all == []`
+        - Applicant.all
+2. Create Interviewer Class
+    - Implement single source of truth
+        - `@@all == []`
+        - Applicant.all
+3. Create Interview Class
+    - Implement single source of truth
+        - `@@all == []`
+        - Applicant.all
+    - Interview >- Applicant
+        - Therefore, Interview needs to have a reference to the Applicant it belongs to
+        - We can do this by passing in an Applicant instance to `initialize` when we create a new
+        instance of Interview
+    - Interview >- Interviewer
+        - Therefore, Interview needs to have a reference to the Interviewer it belongs to
+        - We can do this by passing in an Interviewer instance to `initialize` when we create a new
+        instance of Interview
+4. For an Interviewer, find all their Interviews
+    - Interviewer#interviews
+    ```Ruby
+    # inside Interviewer class
+
+    def interviews
+        Interview.all.select do |interview_instance|
+            interview_instance.interviewer == self
+        end
+    end
+    ```
+5. For all those interviews of an interviewer, get the applicants
+    - Interviewer#applicants
+    ```Ruby
+    # inside Interviewer class
+
+    def applicants
+        self.interviews.map do |interview_instance|
+            interview_instance.applicant
+        end
+    end
+    ```
+6. Repeat steps 4 & 5 with the Applicant class
+    - For an Applicant, find all their Interviews
+        - Applicant#interviews
+        ```Ruby
+        # inside Applicant class
+
+        def interviews
+            Interview.all.select do |interview_instance|
+                interview_instance.applicant == self
+            end
+        end
+        ```
+    - For all those interviewers of an interviewer, get the interviewers
+        - Applicant#interviewers
+        ```Ruby
+        # inside Applicant class
+
+        def interviewers
+            self.interviews.map do |interview_instance|
+                interview_instance.interviewer
+            end
+        end
+        ```
+
+**NOTE:** Don't forget to sprinkle lots of testing throughout these steps 😁
+
+
 
 
 ---- 
