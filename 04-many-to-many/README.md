@@ -98,28 +98,37 @@ ___
 
 ### What are the steps we took to create the many to many relationship between an Interviewer and an Applicant through an Interview?
 
-1. Create Applicant Class
-    - Implement single source of truth
-        - `@@all == []`
-        - Applicant.all
-2. Create Interviewer Class
-    - Implement single source of truth
-        - `@@all == []`
-        - Applicant.all
-3. Create Interview Class
-    - Implement single source of truth
-        - `@@all == []`
-        - Applicant.all
-    - Interview >- Applicant
-        - Therefore, Interview needs to have a reference to the Applicant it belongs to
-        - We can do this by passing in an Applicant instance to `initialize` when we create a new
+__1. Create Applicant Class__
+
+
+- Implement single source of truth
+    - `@@all == []`
+    - Applicant.all method
+
+
+__2. Create Interviewer Class__
+
+- Implement single source of truth
+    - `@@all == []`
+    - Applicant.all method
+
+__3. Create Interview Class__
+
+- Implement single source of truth
+    - `@@all == []`
+    - Applicant.all method
+- Interview >- Applicant
+    - Therefore, Interview needs to have a reference to the Applicant it belongs to
+    - We can do this by passing in an Applicant instance to `initialize` when we create a new
         instance of Interview
-    - Interview >- Interviewer
-        - Therefore, Interview needs to have a reference to the Interviewer it belongs to
-        - We can do this by passing in an Interviewer instance to `initialize` when we create a new
+- Interview >- Interviewer
+    - Therefore, Interview needs to have a reference to the Interviewer it belongs to
+    - We can do this by passing in an Interviewer instance to `initialize` when we create a new
         instance of Interview
-4. For an Interviewer, find all their Interviews
-    - Interviewer#interviews
+
+__4. For an Interviewer, find all their Interviews__
+
+- Interviewer#interviews
     ```Ruby
     # inside Interviewer class
 
@@ -129,8 +138,9 @@ ___
         end
     end
     ```
-5. For all those interviews of an interviewer, get the applicants
-    - Interviewer#applicants
+__5. For all those interviews of an interviewer, get the applicants__
+
+- Interviewer#applicants
     ```Ruby
     # inside Interviewer class
 
@@ -140,9 +150,10 @@ ___
         end
     end
     ```
-6. Repeat steps 4 & 5 with the Applicant class
-    - For an Applicant, find all their Interviews
-        - Applicant#interviews
+__6. Repeat steps 4 & 5 with the Applicant class__
+
+- For an Applicant, find all their Interviews
+    - Applicant#interviews
         ```Ruby
         # inside Applicant class
 
@@ -152,8 +163,8 @@ ___
             end
         end
         ```
-    - For all those interviewers of an interviewer, get the interviewers
-        - Applicant#interviewers
+- For all those interviewers of an interviewer, get the interviewers
+    - Applicant#interviewers
         ```Ruby
         # inside Applicant class
 
