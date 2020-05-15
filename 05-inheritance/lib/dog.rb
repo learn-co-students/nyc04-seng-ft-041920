@@ -1,3 +1,3 @@
-class Dog
-
+class Dog < Animal
+  
 end
