@@ -8,3 +8,8 @@ task :console do
   # open Pry console, similar to binding.pry
   Pry.start
 end
+
+desc "Print cowboys"
+task :cowboy_printer do
+  puts "🤠" * 1000
+end

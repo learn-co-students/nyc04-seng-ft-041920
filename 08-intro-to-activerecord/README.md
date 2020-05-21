@@ -17,13 +17,37 @@ Intro to ActiveRecord
   * Demonstrate how to work with migration files: `migrate` and `rollback`
   * Write CRUD on a model using ActiveRecord
 
+Domain: Game Review
+- game
+- player
+
 ### ActiveRecord
 
 What are the steps for setting up ActiveRecord on a model?
 
 1. Create model
+  - create the file and class definition
 2. Create migration
+  - set of instructions for how to change the database
+  - `rake db:create_migration NAME=create_games`
+```rb
+class CreateGames < ActiveRecord::Migration[6.0]
+  def change
+    create_table :games do |t|
+      # attributes?
+      # title, rating, goals, genre
+      t.string :title
+      t.integer :rating
+      t.string :goals
+      t.string :genre
+ 
+      t.timestamps
+    end
+  end
+end
+```
 3. Run migration
+
 4. Check your schema
 5. Test!
 
@@ -34,7 +58,7 @@ Rake lets us save some set instructions we want the computer to run into a comma
 If we want to check what tasks we have available to us, we can do `rake --tasks` or `rake -T`
 
 ### Migrations
-Migrations are ActiveRecord keeps track of database changes over time.
+Migrations are ActiveRecord keeps track of database changes over time. Think of migrations as *version control* (like git) for your database.
 
 We specify how we want the database to change in the migration file: [docs](https://guides.rubyonrails.org/active_record_migrations.html)
 
