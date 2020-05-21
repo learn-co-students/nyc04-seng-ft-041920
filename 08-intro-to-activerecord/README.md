@@ -47,9 +47,14 @@ class CreateGames < ActiveRecord::Migration[6.0]
 end
 ```
 3. Run migration
+ - `rake db:migrate`
 
 4. Check your schema
+  - `rake db:migrate:status`
+  - and check your schema.rb file!
+
 5. Test!
+
 
 ### Rake
 
