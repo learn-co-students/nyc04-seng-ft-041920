@@ -13,7 +13,6 @@
     - Describe the API of a Ruby Array
     - Explain the uses of an API on the internet
 3. Practice making requests to an API and parsing and examining the result
-    - Practice writing a command line application (CLI)
 
 
 #####  Outline
@@ -102,6 +101,9 @@ https://www.googleapis.com/books/v1/volumes?q=ruby+programming
 
 - What is the q= doing in the Google Books API?
 
+
+<img src="pics/IMG_3188.jpg" alt="drawing" width="300"/>
+
 ___
 
 ### Deliverables
@@ -111,12 +113,12 @@ ___
 
     #### Steps
     1. Create a file for your project
-    2. Add 'rest-client', 'json', and 'pry' gems
+    2. Add `rest-client`, `json`, and `pry` gems
     3. Make a search query using the Books API
-        - Use RestClient.get() to GET a given url https://www.googleapis.com/books/ v1/volumes?q=#{user_query}
+        - Use `RestClient.get()` to GET a given url `https://www.googleapis.com/books/ v1/volumes?q=#{user_query}`
     4. Inspect the response object and see what we get. Use pry for this.
         - check out the value of `response["items"]` and `response.body`
-    5. Use JSON.parse() and pass response object into this.
+    5. Use `JSON.parse()` and pass response object into this.
     6. Figure out how to get titles out of the Hash.
     7. Figure out how to list all of the titles
 
