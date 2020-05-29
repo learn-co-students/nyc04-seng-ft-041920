@@ -126,3 +126,4 @@ ___
 
 #### Extra Resources
 - [List of Some Public APIs](https://github.com/public-apis/public-apis)
+- [JSON Formatter](https://chrome.google.com/webstore/detail/json-formatter/bcjindcccaagfpapjjmafapmmgkkhgoa)
