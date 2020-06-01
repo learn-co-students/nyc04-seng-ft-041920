@@ -251,3 +251,6 @@ A language agnostic data format. It's a type of string that we can get back from
 ##### Terminology
 - [What are the parts of a URL and what do they do?](https://www.mattcutts.com/blog/seo-glossary-url-definitions/)
 - [Difference between URI & URL](https://stackoverflow.com/questions/176264/what-is-the-difference-between-a-uri-a-url-and-a-urn)
+
+##### Internet Privacy
+- [TIPS, TOOLS AND HOW-TOS FOR SAFER ONLINE COMMUNICATIONS](https://ssd.eff.org/en#index)
