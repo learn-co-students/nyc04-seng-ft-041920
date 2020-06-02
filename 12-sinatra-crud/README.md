@@ -14,7 +14,7 @@
 
 ### Outline
 - Review our code from yesterday
-    - Update our index view & create a show view
+    - Update our index view & Create a show view
         - Links
         - Dynamic Routing
 - Finish *Read* part of CRUD
@@ -27,7 +27,7 @@
 ## [REST](http://www.restular.com/) & CRUD Deliverables
 
 - [ ] Create
-    - [ ] Get '/users/new' -> Show the user a form to create a new user
+    - [ ] GET '/users/new' -> Show the user a form to create a new user
     - [ ] POST '/users' -> Create a new user in our database
 - [ ] Read 
     - [x] GET '/users' -> Show all users
