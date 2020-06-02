@@ -19,11 +19,36 @@ class ApplicationController < Sinatra::Base
   get '/users' do
     # model
     @users = User.all
-  
     @monkey = "🐵"
 
     # response
-    erb :users
+    erb :index
   end
+
+  # Show a form to create a new user
+  get '/users/new' do
+    # response
+    erb :new
+  end
+
+  # Show the information for one specific user
+  get '/users/:id' do
+    # model
+    @user = User.find(params[:id])
+    @emoji = "😻"
+
+    # response
+    erb :show
+  end
+
+  # create a new user & redirect to the profile for the new user
+  post '/users' do
+    # model
+    user = User.create(params[:user])
+
+    # response
+    redirect "/users/#{user.id}"
+  end
+
 
 end
