@@ -24,9 +24,9 @@ Sinatra CRUD Part 2
 ___
 
 ## [REST](http://www.restular.com/) & CRUD
-- [ ] Create
-  - [ ] GET '/users/new' -> Show the user a form to create a new user
-  - [ ] POST '/users' -> Create a new user in our database
+- [x] Create
+  - [x] GET '/users/new' -> Show the user a form to create a new user
+  - [x] POST '/users' -> Create a new user in our database
 - [x] Read
   - [x] GET '/users' -> Show all users
   - [x] GET '/users/:id' -> Show one user
