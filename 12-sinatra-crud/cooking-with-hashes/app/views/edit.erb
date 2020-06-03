@@ -1,0 +1,32 @@
+<h1>This is the form to edit <%=  @user.username %></h1>
+
+
+<form method="POST" action="/users/<%=  @user.id %>">
+<input type="hidden" name="_method" value="PUT">
+    <label for="user[username]">Username</label>
+    <input type="string" name="user[username]" value="<%=  @user.username %>">
+    <br>
+    <br>
+    <label for="user[age]">Age</label>
+    <input type="number" name="user[age]" value="<%=  @user.age %>">
+    <br>
+    <br>
+    <label for="user[faveFood]">Favorite Food</label>
+    <input type="string" name="user[faveFood]" value="<%=  @user.faveFood %>">
+    <br>
+    <br>
+    <input type="submit" value="Edit user">
+</form>
+
+<!--
+?user%5Busername%5D=Darth+Vader&user%5Bage%5D=42&user%5BfaveFood%5D=deviled+eggs
+user[username]=Darth Vader
+user[age]=42
+user[faveFood]=deviled eggs
+
+
+?username=Darth+Vader&age=43&faveFood=deviled+eggs
+username=Darth Vader
+age=43
+faveFood=deviled eggs
+-->

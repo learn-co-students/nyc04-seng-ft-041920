@@ -5,6 +5,7 @@ class ApplicationController < Sinatra::Base
   configure do
     set :public_folder, 'public'
     set :views, 'app/views'
+    set :method_override, true # this will tell our application to look for the _method key in params
   end
 
   get '/' do
@@ -14,8 +15,8 @@ class ApplicationController < Sinatra::Base
   get '/cheese' do
     erb :cheese
   end
-
-  # TASK 1: Show a list of ALL of the users
+  
+  # Show a list of ALL of the users
   get '/users' do
     # model
     @users = User.all
@@ -31,7 +32,7 @@ class ApplicationController < Sinatra::Base
     erb :new
   end
 
-  # Show the information for one specific user
+  # Show a page with the information for ONE specific user
   get '/users/:id' do
     # model
     @user = User.find(params[:id])
@@ -41,7 +42,7 @@ class ApplicationController < Sinatra::Base
     erb :show
   end
 
-  # create a new user & redirect to the profile for the new user
+  # Create a new user & redirect to the profile for the new user
   post '/users' do
     # model
     user = User.create(params[:user])
@@ -50,5 +51,35 @@ class ApplicationController < Sinatra::Base
     redirect "/users/#{user.id}"
   end
 
+  # Show a form to edit ONE specific user
+  get '/users/:id/edit' do
+    # find the user
+    @user = User.find(params[:id])
 
+    erb :edit
+  end
+
+  # Edit an existing user & redirect to the profile for the new user 
+  put '/users/:id' do
+    # find the user
+    user = User.find(params[:id])
+
+    # update the user
+    user.update(params[:user])
+
+    # response
+    redirect "/users/#{user.id}"
+  end
+
+  # Delete an existing user
+  delete '/users/:id' do
+    # find the user 
+    user = User.find(params[:id])
+
+    # delete them
+    user.destroy
+
+    # response
+    redirect "/users"
+  end
 end

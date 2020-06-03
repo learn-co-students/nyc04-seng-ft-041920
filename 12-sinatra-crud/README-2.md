@@ -30,18 +30,18 @@ ___
 - [x] Read
   - [x] GET '/users' -> Show all users
   - [x] GET '/users/:id' -> Show one user
-- [ ] Update
-  - [ ] GET '/users/:id/edit' -> Show the user a form to edit an existing user
-  - [ ] PUT '/users/:id' -> Update the user in our database
-- [ ] Delete
-  - [ ] DELETE '/users/:id' -> Delete the user from our database
+- [x] Update
+  - [x] GET '/users/:id/edit' -> Show the user a form to edit an existing user
+  - [x] PUT '/users/:id' -> Update the user in our database
+- [x] Delete
+  - [x] DELETE '/users/:id' -> Delete the user from our database
 
 <br>
 <br>
 
 ____
 
-<!-- ![Keep going!](pics/lookathowfaryouvecome.png) -->
+
 <img src="pics/lookathowfaryouvecome.png" alt="cable" width="500"/>
 
 ___
