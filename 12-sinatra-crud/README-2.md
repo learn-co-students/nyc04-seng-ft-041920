@@ -31,7 +31,7 @@ ___
   - [x] GET '/users' -> Show all users
   - [x] GET '/users/:id' -> Show one user
 - [ ] Update
-  - [ ] GET '/users/:id/edit' -> Show the user a form to edit an existing user user
+  - [ ] GET '/users/:id/edit' -> Show the user a form to edit an existing user
   - [ ] PUT '/users/:id' -> Update the user in our database
 - [ ] Delete
   - [ ] DELETE '/users/:id' -> Delete the user from our database
