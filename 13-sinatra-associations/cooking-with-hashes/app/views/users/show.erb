@@ -3,6 +3,17 @@
 <h3>AGE: <%= @user.age %></h3>
 <h3>Favorite Food: <%= @user.faveFood %></h3>
 <p> <%= @emoji %></p>
+<br>
+<br>
+<h2>This are all of <%= @user.username %>'s recipes! 👩‍🍳</h2>
+
+<% @user.recipes.each do |r|%>
+   <p> Name: <%= r.name %> | Rating: <%= r.rating %> </p>
+<% end %>
+
+
+<br>
+<br>
 <a href="/users/<%= @user.id %>/edit">Click here to edit!</a>
 <br>
 <br>
