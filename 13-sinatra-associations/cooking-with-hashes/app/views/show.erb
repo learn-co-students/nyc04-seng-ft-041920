@@ -1,0 +1,12 @@
+<h1>This is <%= @user.username %>'s profile!</h1>
+
+<h3>AGE: <%= @user.age %></h3>
+<h3>Favorite Food: <%= @user.faveFood %></h3>
+<p> <%= @emoji %></p>
+<a href="/users/<%= @user.id %>/edit">Click here to edit!</a>
+<br>
+<br>
+<form method="POST" action="/users/<%= @user.id %>">
+    <input type="hidden" name="_method" value="DELETE">
+    <input type="submit" value="Delete user">
+</form>

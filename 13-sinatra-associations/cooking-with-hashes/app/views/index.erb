@@ -1,0 +1,14 @@
+<h1>Here is a list of all of our users!</h1>
+<br>
+<br>
+<a href="https://www.google.com/">Click here to go to google!</a>
+<br>
+<br>
+<% @users.each do |user| %>
+    <a href="/users/<%= user.id %>" > 
+        <%= user.username %> | <%= user.id %>
+    </a>
+    <br>
+    <br>
+<% end%>
+<p> <%= @monkey * 100%> </p>
