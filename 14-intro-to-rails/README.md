@@ -1,6 +1,7 @@
 # Intro to Rails
 
-![ror](pics/Ruby_On_Rails_Logo.svg.png)
+<img src="pics/Ruby_On_Rails_Logo.svg.png" alt="Ruby On Rails Logo" width="700"/>
+
 
 ## SWBATs
 
@@ -26,7 +27,7 @@ ___
 
 ___
 
-![Server is down](pics/server-cheer.jpg)
+<img src="pics/server-cheer.jpg" alt="server is down" width="500"/>
 
 ____
 
