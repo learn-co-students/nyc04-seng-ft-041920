@@ -1,0 +1,12 @@
+<h1>Welcome! See all of our users!</h1>
+<hr>
+<% @users.each do |u| %>
+   <br>
+   <%= link_to u.username, "/users/#{u.id}" %>
+
+   <%= link_to u.username, user_path(u.id) %>
+   <%= link_to u.username, u %>
+   <!--a href="/users/<%=u.id%>"> <%= u.username %> | <%= u.age %> </a-->
+   <br>
+<% end %>
+
