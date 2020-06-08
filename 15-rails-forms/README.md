@@ -2,7 +2,7 @@
 
 
 <!-- ![Friday to Monday](pics/fri-mon.png) -->
-<img src="pics/fri-mon.png" alt="Friday to Monday" width="600"/>
+<img src="pics/fri-mon.png" alt="Friday to Monday" width="550"/>
 
 ___
 
