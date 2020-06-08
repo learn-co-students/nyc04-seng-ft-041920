@@ -34,9 +34,9 @@ ____
   - [x] Create
     - [x] HTML form vs `form_tag` vs `form_for`
     - [x] Strong Params
-  - [ ] Update
-    - [ ] reusable `form_for`
-  - [ ] Delete
+  - [x] Update
+    - [x] reusable `form_for`
+  - [x] Delete
     - `button_to`
 
 ___

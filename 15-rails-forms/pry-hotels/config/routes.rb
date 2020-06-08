@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   # get '/hotels/:id', to: "hotels#show", as: "hotel"
   # get '/hotels/new', to: "hotels#new", as: "new_hotel"
   # post '/hotels', to: "hotels#create"
-
-  resources :hotels, only: [:index, :show, :new, :create]
+  # get '/puppies/trainers/blahblahs/something', to: "puppies#some_action", as: "blahblah"
+  
+  resources :hotels, only: [:index, :show, :new, :create, :edit, :update, :destroy]
 end

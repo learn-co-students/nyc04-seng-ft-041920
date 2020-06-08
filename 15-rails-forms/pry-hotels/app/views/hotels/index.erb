@@ -2,11 +2,12 @@
 <hr>
 
 <% @hotels.each do |hotel| %>
-    <h3><%= link_to hotel.name, hotel_path(hotel) %> | <%= hotel.rating %></h3>
+    <h3><%= link_to hotel.name, hotel_path(hotel) %> | Rating: <%= hotel.rating %></h3>
     <em><%= hotel.location %></em>
     <br>
     <%= hotel.amenities %>
     <%= hotel.dining %>
+    <%= button_to "delete", nil, :method => :delete %>
     <hr>
     <br>
 <% end%>
