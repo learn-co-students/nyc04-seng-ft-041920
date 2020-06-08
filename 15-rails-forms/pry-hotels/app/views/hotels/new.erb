@@ -1,0 +1,18 @@
+<h1>Create a new hotel</h1>
+
+
+<%= form_for @hotel do |f| %>
+    <%= f.label :rating %>
+    <%= f.number_field :rating %>
+    <br>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <br>
+    <%= f.label :amenities %>
+    <%= f.text_field :amenities %>
+    <br>
+    <%= f.label :dining %>
+    <%= f.text_field :dining %>
+    <br>
+  <%= f.submit "Create" %>
+<% end %>

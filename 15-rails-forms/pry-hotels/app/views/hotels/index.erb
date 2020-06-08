@@ -1,0 +1,14 @@
+<h1>Pry Hotels!</h1>
+<hr>
+
+<% @hotels.each do |hotel| %>
+    <h3><%= link_to hotel.name, hotel_path(hotel) %> | <%= hotel.rating %></h3>
+    <em><%= hotel.location %></em>
+    <br>
+    <%= hotel.amenities %>
+    <%= hotel.dining %>
+    <hr>
+    <br>
+<% end%>
+
+<%= link_to "Add Hotel", new_hotel_path %>

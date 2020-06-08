@@ -1,7 +1,6 @@
 # Rails Forms
 
 
-<!-- ![Friday to Monday](pics/fri-mon.png) -->
 <img src="pics/fri-mon.png" alt="Friday to Monday" width="550"/>
 
 ___
@@ -14,16 +13,27 @@ ___
 
 
 
+attendee -< ticket 1
+taco -< ingredient 5
+user -< device 2
+user -< restaurant 5
+smoothie -< ingredient 5
+hotel -< room 6
+
+App name: Pry Hotels
+
+Pryatt
+Rooms: name
 ____
 
 ## Outline
-- [ ] Create our model using `rails g model`
-- [ ] Work on CRUD, focus on routes and ActionView helpers
-  - [ ] Read
-    - [ ] Review `link_to` and path helpers
-  - [ ] Create
-    - [ ] HTML form vs `form_tag` vs `form_for`
-    - [ ] Strong Params
+- [x] Create our model using `rails g model`
+- [x] Work on CRUD, focus on routes and ActionView helpers
+  - [x] Read
+    - [x] Review `link_to` and path helpers
+  - [x] Create
+    - [x] HTML form vs `form_tag` vs `form_for`
+    - [x] Strong Params
   - [ ] Update
     - [ ] reusable `form_for`
   - [ ] Delete
