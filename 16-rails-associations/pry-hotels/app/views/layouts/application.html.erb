@@ -8,8 +8,16 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
-    <%= yield %>
+    <nav>
+      <ul>
+        <li><%= link_to "Hotels", hotels_path %> </li>
+        <li><%= link_to "Add Hotel", new_hotel_path %></li>
+        <li><%= link_to "Add Room", new_room_path %></li>
+        </ul>
+    </nav>
+    <main>
+      <%= yield %>
+    </main>
   </body>
 </html>

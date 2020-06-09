@@ -48,6 +48,7 @@ class HotelsController < ApplicationController
     # delete "/hotels/:id"
     def destroy
         hotel = Hotel.find(params[:id])
+        # hotel.rooms.destroy_all
         hotel.destroy
 
         redirect_to hotels_path

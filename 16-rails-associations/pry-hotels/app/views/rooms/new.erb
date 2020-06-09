@@ -1,0 +1,35 @@
+<h1>Create a New Room</h1>
+<hr>
+<br>
+<%= form_for @room do |f| %>
+    <%= f.label :number %>
+    <%= f.number_field :number %>
+    <br>
+    <br>
+    <%= f.label :views %>
+    <%= f.text_field :views %>
+    <br>
+    <br>
+    <%= f.label :description %>
+    <%= f.text_field :description %>
+    <br>
+    <br>
+    <%# f.label :vacant %>
+    <%# f.text_field :vacant %>
+    <%= f.radio_button :vacant, true %>
+    <%= f.label :vacant, "Room is vacant"%>
+    <%= f.radio_button :vacant, false %>
+    <%= f.label :vacant, "Room is occupied"%>
+    <br>
+    <br>
+    <%= f.label :beds %>
+    <%= f.number_field :beds %>
+    <br>
+    <br>
+    <%= f.label :hotel_id %>
+    <%= f.collection_select(:hotel_id, Hotel.all, :id, :name) %>
+
+    <br>
+    <br>
+  <%= f.submit "Create" %>
+<% end %>
