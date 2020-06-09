@@ -1,0 +1,14 @@
+<h1><%= @hotel.name %></h1>
+<hr>
+<h3>Rating: <%= @hotel.rating %></h3>
+    <em><%= @hotel.location %></em>
+    <br>
+<p>
+   Amenities: <%= @hotel.amenities %>
+   <br>
+   Dining Options: <%= @hotel.dining %>
+</p>
+
+<%= button_to "delete", hotel_path(@hotel), :method => :delete %>
+<br>
+<%= link_to "Edit", edit_hotel_path(@hotel) %> | <%= link_to "Hotels Index Page", hotels_path %>

@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  amenities: MyString
+  location: MyString
+  rating: 1
+  dining: MyString
+
+two:
+  name: MyString
+  amenities: MyString
+  location: MyString
+  rating: 1
+  dining: MyString

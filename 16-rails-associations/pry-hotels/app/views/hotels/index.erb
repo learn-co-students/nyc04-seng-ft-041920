@@ -1,0 +1,18 @@
+<h1>Pry Hotels!</h1>
+<hr>
+<br>
+<% @hotels.each do |hotel| %>
+    <h3><%= link_to hotel.name, hotel_path(hotel) %> | Rating: <%= hotel.rating %></h3>
+    <em><%= hotel.location %></em>
+    <br>
+    <br>
+    <p><%= hotel.amenities %></p> 
+    <p><%= hotel.dining %></p>
+    <br>
+    <br>
+    <%= button_to "delete", "/hotels/#{hotel.id}", :method => :delete %>
+    <br>
+    <hr>
+<% end%>
+
+<%= link_to "Add Hotel", new_hotel_path %>
