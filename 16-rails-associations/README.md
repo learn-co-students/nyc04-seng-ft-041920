@@ -4,10 +4,10 @@
 
 
 ## SWBATs
-- Set up ActiveRecord associations on models in Rails
-- Use data from the associations in view files
-- Render a dropdown `<select>` tag in a form using the `collection_select` helper
-- Handle deleting an instance of a model that has other records associated using `dependent: :destroy`
+1. Set up ActiveRecord associations on models in Rails
+2. Use data from the associations in view files
+3. Render a dropdown `<select>` tag in a form using the `collection_select` helper
+4. Handle deleting an instance of a model that has other records associated using `dependent: :destroy`
 
 ## Outline
 - [ ] Add an additional model to our domain
