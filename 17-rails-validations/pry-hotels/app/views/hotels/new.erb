@@ -1,6 +1,11 @@
 <h1>Create a New Hotel</h1>
 <hr>
 <br>
+<% if @errors %>
+  <% @errors.each do |error| %>
+    <p style="color:red"><%= error %></p>
+  <% end %>
+<% end %>
 <%= form_for @hotel do |f| %>
     <%= f.label :rating %>
     <%= f.number_field :rating %>
