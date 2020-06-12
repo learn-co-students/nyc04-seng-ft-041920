@@ -9,13 +9,13 @@ ___
 
 ### Outline
 - [ ] Discuss how websites use cookies
-  - [ ] Twitter, NYTimes
+  - [ ] NYTimes, Twitter
 - [ ] Use cookies to persist information about the client across requests
 - [ ] Demonstrate the `session` hash in Rails
 - [ ] Use the sessions to implement paywall
 
 **Task**: 
-- After viewing a hotel's show page 3 times, we want the user to view an advertisement before viewing any more pages.
+- After viewing any of the show pages combined a total of 3 times, we want the user to view an advertisement before viewing any more pages.
 
 ___
 
