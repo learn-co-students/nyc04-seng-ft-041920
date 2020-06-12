@@ -1,0 +1,43 @@
+<h1><%= @hotel.name %></h1>
+<hr>
+<h3>Rating: <%= @hotel.rating %></h3>
+    <em><%= @hotel.location %></em>
+    <br>
+<p>
+   Amenities: <%= @hotel.amenities %>
+   <br>
+   Dining Options: <%= @hotel.dining %>
+</p>
+<br>
+<br>
+<hr>
+<h2>Rooms</h2>
+<table>
+    <tr>
+        <th>Room Number</th>
+        <th>Vacancy</th>
+        <th>Bed</th>
+        <th>Views</th>
+        <th>Description</th>
+    </tr>
+    <% @hotel.rooms.each do |room| %>
+        <tr>
+            <td><%= room.number %></td>
+            <td><%= room.vacant %></td>
+            <td><%= room.beds %></td>
+            <td><%= room.views %></td>
+            <td><%= room.description %></td>
+        </tr>
+    <br>
+<% end %>
+
+</table>
+
+
+
+
+<br>
+<br>
+<%= button_to "delete", hotel_path(@hotel), :method => :delete %>
+<br>
+<%= link_to "Edit", edit_hotel_path(@hotel) %> | <%= link_to "Hotels Index Page", hotels_path %>

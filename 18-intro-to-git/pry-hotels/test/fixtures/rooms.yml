@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  number: 1
+  beds: 1
+  views: MyString
+  description: MyString
+  vacant: false
+  hotel: one
+
+two:
+  number: 1
+  beds: 1
+  views: MyString
+  description: MyString
+  vacant: false
+  hotel: two

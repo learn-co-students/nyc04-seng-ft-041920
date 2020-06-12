@@ -1,0 +1,22 @@
+<h1>Edit Form For <%= @hotel.name %></h1>
+<hr>
+
+<%= form_for @hotel do |f| %>
+    <%= f.label :rating %>
+    <%= f.number_field :rating %>
+    <br>
+    <br>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <br>
+    <br>
+    <%= f.label :amenities %>
+    <%= f.text_field :amenities %>
+    <br>
+    <br>
+    <%= f.label :dining %>
+    <%= f.text_field :dining %>
+    <br>
+    <br>
+  <%= f.submit "Edit" %>
+<% end %>
