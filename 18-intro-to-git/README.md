@@ -45,6 +45,15 @@ In a centralized version control system (subversion, clearcase, perforce,mercuri
 
 In distributed systems, you clone a project versus checking out a version of it. You take every bit of the project that's on the server and copy it to your local hard drive. You can then start working on the project locally and you don't have to be online for most operations. The only operations for which you need an internet connection is for synchronizing (push & pull). Because you can work locally, operations tend to be quicker since there's no network latency. If the central server goes down, everyone has a copy of the database. Everybody's clone in some state is a full backup of the project. Moreover, you can push and pull directly to peers or to the central server.
 
+
+<img src="pics/Subversion_Logo.svg.png" width="200">
+<img src="pics/mercurial.png" width="200">
+
+
+<img src="pics/git.png" width="200">
+<img src="pics/clearcase.png" width="200">
+
+
 ## Git & GitHub
 
 
