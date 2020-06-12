@@ -36,7 +36,7 @@ Developers working in teams are continually writing new code and changing existi
 
  - Helps with troubleshooting! Allows us to have a *complete* history of EVERY FILE - EVERY SINGLE CHANGE made by sometimes many individuals over the years! Even more, each change keeps track of the creation/deletion of files, edits to the contents of files, the person who made the changes, the date/time, and written notes on the purpose of each change (commit messages).
 
-- Improves the development process! Branching and merging! Because of these features, teammates can work on the same project at the same time even while working on completely different tasks. It is even beneficial for individuals working on their own because because it allows them to work on independent streams of changes.
+- Improves the development process! Branching and merging! Because of these features, teammates can work on the same project at the same time even while working on completely different tasks. It is even beneficial for individuals working on their own because it allows them to work on independent streams of changes.
 
 
 ## Overview of Centralized vs Distributed Version Control Systems
