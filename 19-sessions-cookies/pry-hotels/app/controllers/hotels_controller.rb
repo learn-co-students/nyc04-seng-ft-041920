@@ -1,4 +1,6 @@
 class HotelsController < ApplicationController
+
+    before_action :set_counter
     
     # get "/hotels"
     def index
@@ -8,6 +10,8 @@ class HotelsController < ApplicationController
 
     # get "/hotels/:id"
     def show
+        session[:counter] = session[:counter] - 1
+
         @hotel = Hotel.find(params[:id])
         render :show
     end

@@ -8,4 +8,5 @@ Rails.application.routes.draw do
   
   resources :rooms, only: [:create, :new] 
   resources :hotels, only: [:index, :show, :new, :create, :edit, :update, :destroy]
+  patch "/sessions/reset", to: "sessions#reset_counter"
 end

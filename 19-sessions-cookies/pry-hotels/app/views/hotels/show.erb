@@ -1,5 +1,7 @@
 <h1><%= @hotel.name %></h1>
 <hr>
+
+<% if session[:counter] > 0 %>
 <h3>Rating: <%= @hotel.rating %></h3>
     <em><%= @hotel.location %></em>
     <br>
@@ -41,3 +43,9 @@
 <%= button_to "delete", hotel_path(@hotel), :method => :delete %>
 <br>
 <%= link_to "Edit", edit_hotel_path(@hotel) %> | <%= link_to "Hotels Index Page", hotels_path %>
+
+<% else %>
+   <iframe width="877" height="605" src="https://www.youtube.com/embed/X21mJh6j9i4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+   <%= button_to "I swear I watched this ad", "/sessions/reset", method: :patch %>
+<% end %>
+
