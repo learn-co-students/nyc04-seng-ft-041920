@@ -1,0 +1,53 @@
+h1 {
+    color: blue;
+    background-color: bisque;
+    padding-left: 10vw;
+}
+
+#husky-header {
+    color: turquoise;
+}
+
+h2 {
+    color: green;
+}
+
+.dog {
+    color: yellowgreen;
+}
+
+.labs {
+    color: red;
+}
+
+
+.labs:hover {
+    color: purple;
+}
+
+section h2 {
+    font-size: 2rem;
+    letter-spacing: -2px;
+    font-family: fantasy;
+    font-weight: lighter;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: lightskyblue;
+}
+
+.lab-pic{
+    width: 33vw;
+    max-height: 15vw;
+    border-radius: 50%;
+}
+
+p, h3, #husky-header {
+    border-style: dotted;
+    border-color: limegreen;
+    border-width: thick;
+}
