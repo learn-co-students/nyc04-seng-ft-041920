@@ -16,7 +16,7 @@ ___
 - `<title> </title>` - text to be shown on browser tab
 - `<body> </body>` - the content of the webpage
 
-#### Box Model
+### Box Model
 
 All HTML elements can be considered as boxes! We can think of every HTML element being wrapped in a box that contains a margin, padding, border, and the content.
 
@@ -29,7 +29,7 @@ All HTML elements can be considered as boxes! We can think of every HTML element
 - [W3schools Box Model](https://www.w3schools.com/css/css_boxmodel.asp)
 
 
-#### h1, h2, h3, ... h6
+### h1, h2, h3, ... h6
 
 The main purpose of the different headers is actually NOT for styling! Their main purpose is for screen readers to be better able to navigate your webpage and for search engines to be able to learn what your webpage is about. One of the best semantic HTML practices is to only have one `<h1>` tag on a webpage. This will make it easier for screen readers and search engines to know what your webpage is about. Moreover, you can have many of the other headers (`<h2>` to `<h6>`). Although each of these header elements has default styling, style including sizing can always be overwritten!
 
