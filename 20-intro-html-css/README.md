@@ -8,6 +8,17 @@
 3. Describe the purpose of h1 - h2, title, and body tags
 4. Use CSS selectors to target HTML elements
 
+
+
+___
+### CSS examples...
+- [Geocities-izer](https://www.wonder-tonic.com/geocitiesizer/)
+- [Ling's Cars](https://www.lingscars.com/)
+- [Code Pen Hot Air Balloon](https://codepen.io/SundayRobot/pen/RVqMdq)
+- [NYC Subway Animation](https://codepen.io/mike-schultz/pen/Xgeapr)
+- [Square Animation](https://codepen.io/valhead/pen/htmKk)
+- [Mexican Flag](https://codepen.io/jesusrmz/pen/XBqZjJ)
+
 ___
 
 ## HTML
@@ -20,10 +31,10 @@ ___
 
 All HTML elements can be considered as boxes! We can think of every HTML element being wrapped in a box that contains a margin, padding, border, and the content.
 
-- content - the text or images displayed on the webpage
-- border - the line around the content
-- padding - the space between the border and content; transparent
-- margin - the space outside of the border or between elements; transparent
+- Content - the text or images displayed on the webpage
+- Border - the line/border that goes around the content and padding
+- Padding - the space between the border and content; transparent
+- Margin - the space outside of the border or between elements; transparent
 
 #### More info
 - [W3schools Box Model](https://www.w3schools.com/css/css_boxmodel.asp)
@@ -39,9 +50,29 @@ ____
 
 ## Styling!
 
+### How to Add CSS to Our HTML??
+
+We have three options - inline, internal, or exporting an external CSS file. The best practice is having your CSS in its own separate file from the HTML!
+
+- Inline
+    
+    ```HTML
+    <h1 style="color: blue;"> Hello World </h1>
+    ```
+    
+- Internal
+    ```HTM
+        <style> <style/>
+    ```
+- External import external page
+    ```HTM
+        < link rel="stylesheet" href="styles.css" >
+    ```
+
+
 ### Intro to Selectors
 
-- **Targeting elements!**
+- **Targeting elements! (Element Selector)**
 
     Let's say you want to style all `<h2>` elements on your webpage a certain way. You need to target that  element in your CSS file. You can target the elements as such:
     ```CSS
@@ -52,7 +83,7 @@ ____
 
     This is saying that you want some styling for ALL `<h1>` elements.
 
-- **Targetting classes!**
+- **Targetting classes! (Class Selector)**
 
     Let's say you have the following HTML:
     ```HTML
@@ -80,7 +111,7 @@ ____
     In the CSS above, you are saying that you want to target all elements that have a class of `languages`.
 
 
-- **Targetting IDs!**
+- **Targetting IDs! (ID Selector)**
     
     IDs are a more specific way to identify an element than a class. Let's say you have the following HTML:
     ```HTML
@@ -174,6 +205,19 @@ _____
 ___
 
 #### Extra Resource
+- [Animista - CSS Animations On Demand](https://animista.net/)
 - [Open in Browser Extension](https://marketplace.visualstudio.com/items?itemName=techer.open-in-browser)
     - alt + b
 - [HTML Boiler Plate](https://marketplace.visualstudio.com/items?itemName=sidthesloth.html5-boilerplate)
+
+- [Awards of design, creativity and innovation on the internet](https://www.awwwards.com/)
+
+- [Codrops - CSS Reference](https://tympanus.net/codrops/css_reference/)
+
+- [CSS Grid Guide](https://css-tricks.com/snippets/css/complete-guide-grid/)
+
+- [CSS MDN](https://css-tricks.com/snippets/css/complete-guide-grid/)
+
+- [Flexbox Froggy - A CSS Game For Practice](https://flexboxfroggy.com/)
+
+- [CSS Grid Garden - Another CSS Game For Practice](http://cssgridgarden.com/)
