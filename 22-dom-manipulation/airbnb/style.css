@@ -1,0 +1,162 @@
+:root {
+  --theme-primary: #FF5A5F;
+}
+
+/* layout */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+}
+
+h1, h2, h3, h4 {
+  margin: 0.5em 0;
+  font-weight: 600;
+}
+
+strong {
+  font-weight: 600;
+}
+
+button {
+  font-size: 14px;
+  font-weight: 500;
+  background: none;
+  border: none;
+  border-radius: 1rem;
+  padding: 0.75rem 1rem;
+  margin-left: 0.5rem;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.18) 0px 1px 2px;
+  transition: all 0.2s;
+}
+
+button:focus,
+button:hover {
+  outline: none;
+  box-shadow: rgba(0, 0, 0, 0.18) 0px 1px 4px;
+}
+
+button:active {
+  box-shadow: rgba(0, 0, 0, 0.18) 1px -2px 4px;
+}
+
+/* NavBar */
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  color: var(--theme-primary);
+  box-shadow: 1px 1px 2px -1px rgba(0,0,0,0.75);
+}
+
+/* layout */
+main {
+  padding: 0.75rem 1rem;
+}
+
+/* ListingsContainer */
+#listings {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  align-items: flex-start;
+}
+
+/* ListingsCard */
+.card {
+  flex: 0 1 100%;
+  margin: 1rem 0;
+  /* margin: 2rem 0.75rem 4rem; */
+  display: flex;
+  flex-direction: column;
+}
+
+.card .details {
+  margin-left: 1rem;
+}
+
+.card .image {
+  position: relative;
+}
+
+.card .image img {
+  border-radius: 4px;
+  width: 100%;
+}
+
+.card .favorite {
+  position: absolute;
+  cursor: pointer;
+  border-radius: 50%;
+  background-color: white;
+  color: var(--theme-primary);
+  margin: 0.5rem;
+  width: 40px;
+  height: 40px;
+  font-size: 1.25rem;
+  padding: 0;
+  top: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+}
+
+.card:hover .favorite {
+  opacity: 0.7;
+} 
+
+.card .favorite:hover {
+  opacity: 1;
+} 
+
+.card .info {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.5rem 0;
+}
+
+.rating {
+  color: var(--theme-primary);
+}
+
+.card .title {
+  margin-bottom: 0.5rem;
+}
+
+/* responsiveness */
+@media (min-width: 768px) { 
+  .card {
+    flex: 0 1 calc(50% - 2rem);
+    margin: 1rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .card {
+    flex: 0 1 calc(33% - 2rem);
+  }
+}
+
+@media (min-width: 1280px) {
+  .card {
+    flex: 0 1 calc(25% - 2rem);
+  }
+
+  header,
+  main {
+    padding: 0.75rem 8rem;
+  }
+}
+
+
