@@ -1,6 +1,6 @@
 # Intro to the DOM 📜
 
-## SWBATs
+## Learning Goals
 - [ ] Draw DOM tree by looking at HTML
 - [ ] Explain what a DOM node is and what its most important attributes are
 - [ ] Use the Chrome Dev tools to explore the DOM tree and its attributes 
@@ -39,7 +39,7 @@
 
 ```html
 <body>
-  <div >
+  <div>
     <h1>Welcome to the DOM Dominion</h1>
     <p>A magical land of trees and <em>mystical</em> properties</p>
     <ul>
@@ -207,29 +207,6 @@ container.removeChild(containerPTag) //removes the child p tag
   - Replace all images on only a certain portion of the DOM
   - Change every other header
   - Bonus (Hard): replace all elements of one tag to another (e.g., `p` to `h1`)
-
----
-
-### Adding Some Dank Memes to the Page
-
-- If you look at the `index.html`, there are **two** JavaScript files being loaded: `index.js` and `dankMemes.js`. I want to use JavaScript to create image tags, set the urls based on the array of strings found in `dankMemes.js` and add those `<img></img>` tags to the page.
-  - First I'll need to find the container to which I'll append the images:
-
-```js
-const imgContainer = document.querySelector('#container')
-```
-
-  - Then I'll iterate over the array of memes and create a new `<img></img>` tag **forEach** (haha lol) element in the array:
-
-```js
-dankMemes.forEach(function(memeUrlString) {
-  const newImgTag = document.createElement('img') //create a new img tag
-  newImgTag.src = memeUrlString //set the src for that img
-  imgContainer.appendChild(newImgTag) //add the img tag to the DOM
-})
-```
-
-  - A note about the choice to use `forEach` instead of `map`. Since we do not care about the return value of our iterator, `forEach` is fine here. If the return value––**mapped** or transformed array––mattered, then we could have chosen another iterator.
 
 ---
 
