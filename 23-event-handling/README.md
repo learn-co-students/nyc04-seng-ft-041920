@@ -1,19 +1,25 @@
-# Browser Events
+# Handling Events
 
 ## Learning Goals
 - [ ] Use events to allow user interaction with the page
-- [ ] Identify commonly used event listeners
+- [ ] Identify commonly used event types
 - [ ] Identify important attributes on the event object and their uses
 - [ ] Combine knowledge of DOM manipulation and events to allow user interaction to change DOM
 
 ### What are some common things users do on a webpage?
 
+scroll
+click
+typing
+search (type in an input field, submit a form)
+
+
 [All the Events](https://developer.mozilla.org/en-US/docs/Web/Events)
 
 ### What are the steps for creating interaction with the DOM?
-1. 
-2. 
-3. 
+1. find the element we care about handling events on
+2. add an event listener with the event type and callback
+3. in the callback, tell js we want to happen
 
 ## What are Web Events 🤔
 
