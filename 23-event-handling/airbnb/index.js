@@ -72,9 +72,11 @@ const listingsSection = document.querySelector("#listings")
 
 // Render Helpers
 function renderOneListing(listingObj) {
+  // create out element with createElement
   const outerCard = document.createElement("div")
   outerCard.classList.add("card")
 
+  // use innerHTML to create its children
   outerCard.innerHTML = `
     <div class="image">
       <img src="${listingObj.imageUrl}" alt="${listingObj.title}"/>
@@ -93,6 +95,7 @@ function renderOneListing(listingObj) {
       </div>
     </div>
   `
+  // append to the container
   listingsSection.append(outerCard)
   // listingsSection.innerHTML += `
   //   <div class="card">
