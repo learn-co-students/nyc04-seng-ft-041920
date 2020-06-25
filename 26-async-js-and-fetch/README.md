@@ -1,12 +1,45 @@
-# Ajax and Fetch
+# Async JS and Fetch
 
-## SWBATs
+## Learning Goals
 - [ ] Recognize the problems solved by asynchronous code
 - [ ] Distinguish between asynchronous and synchronous code
 - [ ] Use `fetch` to communicate with APIs 
 - [ ] Use `then` to defer function calls until promises resolve
 - [ ] Synthesize knowledge of DOM manipulation with asynchronous javascript
 - [ ] **BONUS** Use `catch` to handle errors in promises
+
+```rb
+def my_method
+  puts "hello"
+  10
+end
+
+my_method
+```
+
+## Notes
+- Synchronous
+- Asynchronous - setInterval, event, defer
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## What Does Synchronous/ Asynchronous Mean 🕰
 

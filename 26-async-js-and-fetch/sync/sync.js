@@ -14,8 +14,30 @@ function sleep(time) {
   }
 }
 
-button.addEventListener("click", () => {
-  console.log("fetching pokemon")
+// let a;
+// a = "something"
 
-  console.log("done!")
+button.addEventListener("click", () => {
+  console.log("BEFORE setTimeout")
+
+  // const myPromise = fetch("https://pokeapi.co/api/v2/pokemon/2")
+
+  // myPromise.then(response => {
+
+  //   const anotherDangPromise = response.json()
+
+  //   anotherDangPromise.then(jsObj => {
+
+  //     console.log(jsObj)
+  //   })
+
+  // })
+
+  fetch("https://pokeapi.co/api/v2/pokemon/2")
+    .then(response => response.json())
+    .then(jsObj => {
+      console.log(jsObj)
+    })
+
+  console.log("AFTER setTimeout")
 })
