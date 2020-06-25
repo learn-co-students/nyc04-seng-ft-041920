@@ -83,17 +83,18 @@ function renderAllListings(listings) {
 
 /******************  Initial Render ******************/
 // renderAllListings(listingsArray)
-function myCustomFetch(url) {
-  return fetch(url).then(resp => resp.json())
-}
 
-myCustomFetch("http://localhost:3000/listings")
-  .then(listingData => {
-    renderAllListings(listingData)
-  })
+// function myCustomFetch(url) {
+//   return fetch(url).then(resp => resp.json())
+// }
 
-// fetch("http://localhost:3000/listings")
-//   .then(resp => resp.json())
+// myCustomFetch("http://localhost:3000/listings")
 //   .then(listingData => {
 //     renderAllListings(listingData)
 //   })
+
+fetch("http://localhost:3000/listings")
+  .then(resp => resp.json())
+  .then(listingData => {
+    renderAllListings(listingData)
+  })
