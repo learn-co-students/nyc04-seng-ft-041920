@@ -18,16 +18,7 @@ listingsSection.addEventListener("click", event => {
     const listingId = outerCard.dataset.id
 
     // Do (DELETE /listings/:id) fetch
-    fetch(`http://localhost:3000/asdasdasd/${listingId}`, {
-      method: "DELETE"
-    })
-      .then(res => {
-        if (res.ok) {
-          return res.json()
-        } else {
-          throw new Error(res.statusText)
-        }
-      })
+    deleteListing(listingId)
       .then(data => {
         console.log(data) // delete will return an empty object
         // Pessimistic Rendering -> waiting for the response before updating the DOM
@@ -53,16 +44,7 @@ listingsSection.addEventListener("click", event => {
     likesSpan.textContent = `${newLikes}🔥`
 
     // PATCH /listings/:id
-    fetch(`http://localhost:3000/listings/${listingId}`, {
-      method: "PATCH",
-      headers: {
-        "Content-Type": "application/json",
-        "Accept": "application/json",
-      },
-      body: JSON.stringify({
-        likes: newLikes
-      })
-    })
+    updateLikes(listingId, newLikes)
   }
 })
 
@@ -84,18 +66,8 @@ form.addEventListener("submit", event => {
 
   // Do Y fetch
   // POST /listings
-  fetch(`http://localhost:3000/listings`, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      "Accept": "application/json",
-    },
-    body: JSON.stringify(listingObj)
-  })
-    .then(r => r.json())
+  createListing(listingObj)
     .then(actualNewListing => {
-      console.log(listingObj)
-      console.log(actualNewListing)
       // And slap Z on/off the DOM
       // slap on the dom
       renderOneListing(actualNewListing)
@@ -144,8 +116,7 @@ function renderAllListings(listings) {
 
 
 /******************  Initial Render ******************/
-fetch("http://localhost:3000/listings")
-  .then(resp => resp.json())
+getListings()
   .then(listingData => {
     renderAllListings(listingData)
   })
