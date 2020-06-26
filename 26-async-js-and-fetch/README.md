@@ -9,6 +9,109 @@
 - [ ] Persist data using `fetch`
 - [ ] Understand the difference between optimistic and pessimistic rendering
 - [ ] **BONUS** Use `catch` to handle errors in promises
+- [ ] **BONUS** Refactor `fetch` using the adapter pattern
+
+## API Documentation
+
+`json-server` follows RESTful conventions for endpoints and will give us the ability to perform CRUD actions on any resource included in our `db.json` file. See the [readme](https://github.com/typicode/json-server) for all options. Here's an example of how to work with it using our listings data:
+
+### GET /listings
+
+Example Response:
+```json
+[
+    {
+      "id": 1,
+      "imageUrl": "https://i.kinja-img.com/gawker-media/image/upload/s--vYNPTkDt--/c_scale,fl_progressive,q_80,w_800/198qdy1m0jf7mjpg.jpg",
+      "location": "Middle Earth",
+      "price": 400,
+      "title": "Upscale Lair in Quiet Neighborhood",
+      "likes": 10
+    },
+    {
+      "id": 2,
+      "imageUrl": "https://66.media.tumblr.com/184f1c4149e8618763346cc0fe6acc37/tumblr_mvx9ut2WEe1sh566ao1_1280.jpg",
+      "location": "Winterfell",
+      "price": 200,
+      "title": "Historic Castle in 'Cool' Uptown District",
+      "likes": 3
+    },
+]
+```
+
+### DELETE /listings/:id
+
+Example Response:
+```json
+{}
+```
+
+### POST /listings
+
+Required Headers:
+```js
+{
+  "Content-Type": "application/json",
+  "Accept": "application/json",
+}
+```
+
+Required Keys in Body:
+```js
+{
+  "imageUrl": string,
+  "location": string,
+  "price": number,
+  "title": string,
+  "likes": number
+}
+```
+
+Example Response:
+```json
+{
+  "id": 1,
+  "imageUrl": "https://i.kinja-img.com/gawker-media/image/upload/s--vYNPTkDt--/c_scale,fl_progressive,q_80,w_800/198qdy1m0jf7mjpg.jpg",
+  "location": "Middle Earth",
+  "price": 400,
+  "title": "Upscale Lair in Quiet Neighborhood",
+  "likes": 10
+}
+```
+
+### PATCH /listings/:id
+
+Required Headers:
+```js
+{
+  "Content-Type": "application/json",
+  "Accept": "application/json",
+}
+```
+
+Optional Keys in Body:
+```js
+{
+  "imageUrl": string,
+  "location": string,
+  "price": number,
+  "title": string,
+  "likes": number
+}
+```
+
+Example Response:
+```json
+{
+  "id": 1,
+  "imageUrl": "https://i.kinja-img.com/gawker-media/image/upload/s--vYNPTkDt--/c_scale,fl_progressive,q_80,w_800/198qdy1m0jf7mjpg.jpg",
+  "location": "Middle Earth",
+  "price": 400,
+  "title": "Upscale Lair in Quiet Neighborhood",
+  "likes": 10
+}
+```
+
 
 ## What Does Synchronous/ Asynchronous Mean 🕰
 
