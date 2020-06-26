@@ -1,5 +1,3 @@
-/** Yesterday's Code **/
-console.log("hi")
 /****************** DOM Elements ******************/
 const listingsSection = document.querySelector("#listings")
 const toggleSwitch = document.querySelector("#toggle-dark-mode")

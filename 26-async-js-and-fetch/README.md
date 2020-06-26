@@ -6,10 +6,10 @@
 - [x] Use `fetch` to communicate with APIs 
 - [x] Use `then` to defer function calls until promises resolve
 - [x] Synthesize knowledge of DOM manipulation with asynchronous javascript
-- [ ] Persist data using `fetch`
-- [ ] Understand the difference between optimistic and pessimistic rendering
-- [ ] **BONUS** Use `catch` to handle errors in promises
-- [ ] **BONUS** Refactor `fetch` using the adapter pattern
+- [x] Persist data using `fetch`
+- [x] Understand the difference between optimistic and pessimistic rendering
+- [x] **BONUS** Use `catch` to handle errors in promises
+- [x] **BONUS** Refactor `fetch` using the adapter pattern
 
 ## API Documentation
 
