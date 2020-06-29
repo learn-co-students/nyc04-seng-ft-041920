@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="fetch.js"></script>
+  <script src="index.js" defer></script>
+  <title>DragonAirBnB</title>
+</head>
+<body>
+  <header id="menu">
+    <h1 class="logo">DragonAirBnB!</h1>
+    <div class="toggle-switch">
+      <input type="checkbox" id="toggle-dark-mode">
+      <label for="toggle-dark-mode"></label>
+    </div>
+  </header>
+  <main>
+    <section id="new-listing">
+      <div class="form-container">
+        <h4>Add a Listing</h4>
+        <form id="listing-form">
+          <label for="title">Title:</label>
+          <input type="text" name="title" id="title">
+          <label for="imageUrl">Image:</label>
+          <input type="text" name="imageUrl" id="imageUrl">
+          <label for="locationName">Location:</label>
+          <input type="text" name="locationName" id="locationName">
+          <label for="price">$ / Night:</label>
+          <input type="number" name="price" id="price">
+          <input type="submit" value="Submit" />
+        </form>
+      </div>
+    </section>
+    <section id="listings">
+      <!-- create cards using JS -->
+    </section>
+  </main>
+</body>
+</html>
