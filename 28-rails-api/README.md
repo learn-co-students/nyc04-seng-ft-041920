@@ -1,6 +1,6 @@
 # Rails as an API
 
-## SWBATs
+## Learning Goals
 - [ ] Generate a Rails API
 - [ ] Understand CORS configuration
 - [ ] Use a serializer to render JSON
@@ -12,8 +12,6 @@
 Remember that when you create a new Rails application with `rails new <your_app>`, by default Rails will provide you with a ton of stuff that we will not need in order to build an API. Think of the entire ActionView library (all the view helper methods like `form_for`), ERB, the way sessions and cookies are handled, etc.
 
 [Rails provides a way](http://edgeguides.rubyonrails.org/api_app.html) to set up a project that includes common tools needed for APIs and excludes some of the unnecessary extras. What you'll type is `rails new <your_app> --api --database=postgresql`.
-
-(If you forget the `--api` flag you need to add this in your ApplicationController: `skip_before_action :verify_authenticity_token`)
 
 ### Instructions
 

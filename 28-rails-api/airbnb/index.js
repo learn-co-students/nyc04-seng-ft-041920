@@ -31,13 +31,20 @@ listingsSection.addEventListener("click", event => {
     const listingId = outerCard.dataset.id
     const likesSpan = outerCard.querySelector(".likes")
 
-    const newLikes = parseInt(likesSpan.textContent) + 1
+    // const newLikes = parseInt(likesSpan.textContent) + 1
 
-    // optimistic rendering
-    likesSpan.textContent = `${newLikes}🔥`
 
-    // PATCH /listings/:id
-    updateLikes(listingId, newLikes)
+    // PATCH /listings/:id/like
+    fetch(`http://localhost:3000/listings/${listingId}/like`, {
+      method: "PATCH"
+    })
+      .then(r => r.json())
+      .then(updatedListing => {
+
+        // pessimistic rendering
+        likesSpan.textContent = `${updatedListing.likes}🔥`
+        console.log(updatedListing)
+      })
   }
 })
 
@@ -111,6 +118,7 @@ function renderAllListings(listings) {
 }
 
 /******************  Initial Render ******************/
+// GET /listings
 getListings()
   .then(listingData => {
     renderAllListings(listingData)

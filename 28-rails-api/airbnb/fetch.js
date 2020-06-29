@@ -15,16 +15,9 @@ function getListings() {
     .then(r => r.json())
 }
 
-function updateLikes(listingId, newLikes) {
-  return fetch(`http://localhost:3000/listings/${listingId}`, {
-    method: "PATCH",
-    headers: {
-      "Content-Type": "application/json",
-      "Accept": "application/json",
-    },
-    body: JSON.stringify({
-      likes: newLikes
-    })
+function updateLikes(listingId) {
+  return fetch(`http://localhost:3000/listings/${listingId}/like`, {
+    method: "PATCH"
   })
     .then(r => r.json())
 }

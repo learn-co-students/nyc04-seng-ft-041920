@@ -6,7 +6,7 @@
       "locationName": "Middle Earth",
       "price": 400,
       "title": "Upscale Lair in Quiet Neighborhood",
-      "likes": 11
+      "likes": 18
     },
     {
       "id": 2,
@@ -33,7 +33,7 @@
       "likes": 5
     },
     {
-      "id": 4,
+      "id": 5,
       "imageUrl": "https://vignette.wikia.nocookie.net/lotr/images/e/e4/Vlcsnap-2013-05-19-19h49m07s0.png/revision/latest?cb=20130519155935",
       "locationName": "Middle Earth",
       "price": 10,
