@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script defer src="modal.js"></script>
+  <script defer src="index.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Lato&display=swap" rel="stylesheet">
+  <title>Bake Off Challenge</title>
+</head>
+<body>
+    <main>
+      <aside>
+        <h1>Bake Off Challenge</h1>
+        <h2>Entries</h2>
+        <ul id="bakes-container" class="side-list">
+          <!-- Add Bakes Here -->
+        </ul>
+        <h2>Actions</h2>
+        <ul id="actions-container" class="side-list">
+          <li class="item" id="make-bake-button" data-action="new">
+            Make New Bake
+          </li>
+          <li class="item" id="judge-bake-button" data-action="judge">
+            Judge Bakes
+          </li>
+        </ul>
+      </aside>
+      <section>
+        <div id="detail">
+          <h1>Replace Me With A Bake</h1>
+        </div>
+      </section>
+    </main>
+    <div id="modal" style="display: none;" data-action="close">
+      <form id="new-bake-form">
+        <h1>Create New Bake</h1>
+
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name-input">
+
+        <label for="image_url">Image URL</label>
+        <input type="text" name="image_url" id="image-input">
+
+        <label for="description">Description</label>
+        <textarea name="description" rows="2" id="description-input"></textarea>
+
+        <input type="submit" value="Create Bake">
+      </form>
+    </div>
+  </body>
+</html>

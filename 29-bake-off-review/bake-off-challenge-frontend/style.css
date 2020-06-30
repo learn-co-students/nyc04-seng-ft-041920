@@ -1,0 +1,161 @@
+:root {
+  --theme-primary: #c73d67;
+}
+
+/* mini reset */
+* {
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+/* layout */
+body {
+  font-family: Lato, 'Helvetica Neue', Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+/* typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+h1 {
+  margin: 1rem 0;
+}
+
+main {
+  display: grid;
+  grid-template-areas:
+    "nav content";
+  grid-template-columns: 300px 1fr;
+  grid-template-rows: 1fr;
+  height: 100vh;
+}
+
+/* sidebar */
+aside {
+  grid-area: nav;
+}
+
+aside h1 {
+  margin: 1rem;
+  padding: 0.5rem;
+  text-transform: uppercase;
+  font-size: 2em;
+}
+
+aside h2 {
+  margin: 1rem;
+  padding: 0.5rem;
+  border-bottom: 1px solid #000;
+}
+
+aside .item {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border: 1px solid transparent;
+  transition: background-color .3s ease;
+  line-height: 1.5rem;
+}
+
+aside .item.button {
+  font-weight: bold;
+}
+
+aside ul {
+  width: 100%;
+  padding: 0;
+}
+
+aside li.item:hover {
+  background-color: #fae8b9;
+}
+
+aside li.item.winner:after {
+  content: "winner";
+  border-radius: 1em;
+  background-color: #facc57;
+  height: 1.5rem;
+  padding: 0 1em;
+  margin: 0 0.5rem;
+}
+
+/* detail */
+section {
+  grid-area: content;
+  padding: 2rem;
+  background-color: rgb(255, 237, 194);
+}
+
+#detail {
+  max-width: 80%;
+}
+
+#detail img {
+  width: 100%
+}
+
+#score-form {
+  padding: 0
+}
+
+#score-form input[type=number],
+#score-form input[type=submit] {
+  font-size: 1rem;
+  padding: 1rem;
+  width: 4rem;
+  text-align: center;
+  display: inline-block;
+}
+
+/* modal */
+#modal {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+#new-bake-form {
+  background-color: rgb(255, 237, 194);
+  margin-top: 20vh;
+  width: 600px;
+  margin: 20vh auto 0;
+}
+
+/* forms */
+form {
+  padding: 1em;
+}
+
+form input,
+form textarea {
+  display: block;
+  font-size: 0.8rem;
+  width: 100%;
+  max-width: 600px;
+  padding: 0.25em 1em;
+  margin: 0.25em 0 0.5em;
+}
+
+form input[type=submit] {
+  margin: 1em 0 0 0;
+  padding: 1em;
+  width: auto;
+  font-weight: 600;
+  cursor: pointer;
+}
