@@ -1,32 +1,52 @@
 class ControlledForm {
-  constructor(form, callbacks) {
-    this.form = form
 
+  data = {}
+
+  constructor(formSelector, callbacks) {
+    // get the form element
+    this.form = document.querySelector(formSelector)
+
+    // initialize data
+    for (let element of this.form.elements) {
+      this.updateData(element)
+    }
+
+    // handle form submit
     this.form.addEventListener("submit", this.handleSubmit)
 
+    // track changes to the input fields so we can have a live 'snapshot' of the form data whenever we want
+    this.form.addEventListener("input", this.handleInput)
+
+    // callbacks we can use to access data from outside the class
     this.onSubmit = callbacks.onSubmit
+    this.onInput = callbacks.onInput
   }
 
-  handleSubmit = (event) => {
+  updateData(element) {
+    if (element.type === "submit") return;
+
+    if (element.type === "number") {
+      this.data[element.name] = parseInt(element.value)
+    } else {
+      this.data[element.name] = element.value
+    }
+  }
+
+  handleInput = event => {
+    this.updateData(event.target)
+
+    // check that onInput is defined as a function before calling it
+    if (typeof this.onInput === "function") {
+      this.onInput(this.data)
+    }
+  }
+
+  handleSubmit = event => {
     event.preventDefault()
 
-    const data = {}
-    for (let el of event.target.elements) {
-      if (el.type !== "submit") {
-        data[el.name] = el.value
-      }
+    // check that onSubmit is defined as a function before calling it
+    if (typeof this.onSubmit === "function") {
+      this.onSubmit(this.data)
     }
-    console.log("in handleSubmit")
-    this.onSubmit(data)
-
-    // const listingObj = {
-    //   title: event.target.title.value,
-    //   imageUrl: event.target.imageUrl.value,
-    //   locationName: event.target.locationName.value,
-    //   price: event.target.price.value,
-    //   likes: 0
-    // }
-
-    // console.log(listingObj)
   }
 }
