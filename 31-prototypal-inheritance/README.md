@@ -11,15 +11,31 @@
 
 ```rb
 class Dog
-  attr_accessor :first_name, :fav_snacks
+  attr_accessor :first_name, :last_name, :fav_snacks
 
-  def initialize(first_name, fav_snacks)
+  @@all = []
+
+  def initialize(first_name, last_name, fav_snacks)
     @first_name = first_name
+    @last_name = last_name
     @fav_snacks = fav_snacks
+    @@all << self
+  end
+
+  def full_name
+    "#{self.first_name} #{self.last_name}"
   end
 
   def speak
     puts "hi my name is #{this.firstName}"
+  end
+
+  def self.all
+    @@all
+  end
+
+  def self.find_by_name(name) 
+    # find it
   end
 
 end
