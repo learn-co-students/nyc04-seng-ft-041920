@@ -2,11 +2,11 @@
 ================
 
 ## SWBATs
-- [ ] Identify the execution context of a function
-- [ ] Identify some use-cases for `this`
-- [ ] Compare `self` to `this` and understand their differences
-- [ ] Use `bind`, `call`, and `apply` to control `this` in a function's execution context
-- [ ] Use arrow functions to bind `this` in a function's execution context
+- [x] Identify the execution context of a function
+- [x] Identify some use-cases for `this`
+- [x] Compare `self` to `this` and understand their differences
+- [x] Use `bind`, `call`, and `apply` to control `this` in a function's execution context
+- [x] Use arrow functions to bind `this` in a function's execution context
 - [ ] Understand the relationship of `this` to Object Oriented JS
 
 ![](https://media.giphy.com/media/3o7buirYcmV5nSwIRW/giphy.gif)
@@ -18,9 +18,22 @@
 ### Review of `self` in Ruby
 
 ```rb
+# blueprint 
 class Dog
+  attr_accessor :first, :snack
 
+  def initialize(first, snack)
+    @first = first
+    @snack = snack
+  end
+
+  def speak
+    # in an instance method, self is the instance
+    puts "woof my name is #{self.first}"
+  end
 end
+
+dog1 = Dog.new("fezzik")
 ```
 
 
