@@ -2,11 +2,10 @@ JSX and Props
 ===
 
 ## SWBATs
-- [ ] Understand how `create-react-app` works and what it offers a developer
-- [ ] Organize code into files and use the import-export syntax to pass ddata between components
-- [ ] Use props to make components more dynamic and reusable
 - [ ] Setup a new React app and play around with building UIs
-- [ ] **BONUS/HOMEWORK** Use the `children` prop 
+- [ ] Understand how `create-react-app` works and what it offers a developer
+- [ ] Organize code into files and use the import-export syntax to pass data between components
+- [ ] Use props to make components more dynamic and reusable
 
 ## Outline
 - [ ] Review project wireframe/component hierarchy
