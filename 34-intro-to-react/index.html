@@ -13,15 +13,56 @@
 </head>
 <body>
   <div id="root"></div>
+
   <script type="text/babel">
+
+    // [{},{},{}] -> [<Task />, <Task />, <Task />]
+    // .map
+    const taskArray = [
+      { title: "Learn React", description: "Read the docs!", done: false },
+      { title: "Make some components", description: "Talk about JSX and props", done: false },
+      { title: "Come up with a lecture app", description: "Brainstorm ideas", done: false },
+    ]
+
+    // function component -> a function that takes in props 
+    // and returns JSX
+    const Task = (props) => {
+      console.log(props)
+      const { title, description } = props  // destructuring
+      
+      return (
+        <div>
+          <h1>{title}</h1>
+          <h4>{description}</h4>
+        </div>
+      )
+    }
+
+    // ReactDOM.render takes two arguments
+    // 1. JSX (syntax that Babel turns into valid Javascript => React.createElement)
+    // 2. parent element (container)
     ReactDOM.render(
       <div>
-        <h1>Learn React</h1>
-        <h4>Read the docs!</h4>
+        {taskArray.map(taskObj => {
+          // return <Task {...taskObj} />
+          return <Task title={taskObj.title} description={taskObj.description} />
+        })}
       </div>
       ,
       document.getElementById("root")
     )
+
+
+    // element.style.color = "red"
+
+    // ReactDOM.render(
+    //   <div id="main" className="red" style={{ color: "red", backgroundColor: "cyan" }}>
+    //     <Task title="Learn React" description="Read the docs!" />
+    //     <Task title="Make a Component" description="Some reusable UI" />
+    //   </div>
+    //   ,
+    //   document.getElementById("root")
+    // )
   </script>
 </body>
 </html>

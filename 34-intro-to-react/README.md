@@ -17,9 +17,45 @@ Intro to React
 - [ ] Create components using JSX and render them on the DOM
 - [ ] Decide on an app to build together!
 
+- AirBudNB
+- Reverse Yelp (rest rate custs)
+- Tinder for turtles
+
+
 ## Notes
 
+Declarative vs Imperitive
 
+Imperitive
+- cook the rice
+  - wash the rice
+  - add water
+  - put the rice in a pot
+  - ....
+- cook the veggies
+  - season with salt and spices
+  - heat up a pan
+  - put some oil in it
+
+Declarative
+- order a burrito with chorizo, brown rice, salsa, and guac
+```sql
+select name, age
+from persons
+```
+
+
+
+
+### Turn these into components
+
+```js
+const tasks = [
+  { title: "Learn React", description: "Read the docs!", done: false },
+  { title: "Make some components", description: "Talk about JSX and props", done: false },
+  { title: "Come up with a lecture app", description: "Brainstorm ideas", done: false },
+]
+```
 
 ### Imperitive vs Declarative in Code
 
