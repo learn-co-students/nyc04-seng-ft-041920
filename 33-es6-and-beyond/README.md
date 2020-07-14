@@ -43,6 +43,7 @@ new Animal({ id: 1, name: "Koala", donations: 1000, image_url: "some image"})
 document.body.addEventListener("mousemove", (e) => {
   console.log(e.screenX, e.screenY)
 })
+
 document.body.addEventListener("mousemove", ({ screenX, screenY }) => {
   console.log(screenX, screenY)
 })
@@ -84,7 +85,10 @@ Important for IMMUTABILITY
 ```js
 const pasta = {
   sauce: 'red',
-  garlicky: true
+  garlicky: true,
+  anotherObj: {
+    some: "key"
+  }
 }
 
 // OLDer WAY
@@ -205,7 +209,7 @@ class Dog {
     this.age = age
   }
 
-  bark() {
+  bark = () => {
     return this.name
   }
 }
@@ -253,6 +257,10 @@ const foundIan = names.find(name => name === 'ian')
 ```
 
 ---
+```js
+const arr = ["hi", "there"] 
+
+```
 
 #### Dynamic object keys
 

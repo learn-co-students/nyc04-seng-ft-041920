@@ -1,4 +1,6 @@
 import React from 'react';
+
+
 import Sidebar from './Sidebar'
 import AlbumsContainer from './AlbumsContainer';
 import ProfileMenu from './ProfileMenu';
@@ -13,5 +15,7 @@ const App = () => {
     </div>
   );
 }
+
+
 
 export default App;
