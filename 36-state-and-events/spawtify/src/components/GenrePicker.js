@@ -4,9 +4,10 @@ const GenrePicker = () => {
 
   return (
     <div className="genre-picker">
-      <span className="">All</span>
+      <span className="active">All</span>
       <span className="">Cats</span>
-      <span className="active">Dogs</span>
+      <span className="">Dogs</span>
+      <span className="">Birds</span>
       <span className="">Snakes</span>
       <span className="">Goats</span>
     </div>

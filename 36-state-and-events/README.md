@@ -19,9 +19,9 @@ State and Events
 ## Lecture Notes
 App Features to add:
 - counter (example) - on button, then on children
-- filter (only 4+ ratings)
+- filter by genre
 - pagination
-- favorites
+- favorite
 
 
 

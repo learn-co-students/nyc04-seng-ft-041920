@@ -4,6 +4,7 @@ import AlbumsContainer from './AlbumsContainer';
 import ProfileMenu from './ProfileMenu';
 
 const App = () => {
+
   return (
     <div className="app-container">
       <Sidebar />

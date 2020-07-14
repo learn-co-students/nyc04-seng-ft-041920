@@ -4,6 +4,7 @@ import Album from './Album'
 
 // importing data for now, eventually we'll fetch!
 import albumsArray from '../albums.json'
+import ClickCounter from './ClickCounter'
 
 class AlbumsContainer extends React.Component {
 
@@ -22,10 +23,7 @@ class AlbumsContainer extends React.Component {
   render() {
     return (
       <main>
-        <h2>
-          Click Counter:
-          <button>0 Clicks</button>
-        </h2>
+        <ClickCounter />
         <GenrePicker />
         <section className="albums">
           {this.renderAlbums()}

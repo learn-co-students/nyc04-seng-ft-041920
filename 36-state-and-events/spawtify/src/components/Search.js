@@ -1,9 +1,10 @@
 import React from 'react'
 
-const Search = (props) => {
+const Search = () => {
+
   return (
     <div className="search">
-      <h4>Search</h4>
+      {/* TODO: add search form */}
     </div>
   )
 }

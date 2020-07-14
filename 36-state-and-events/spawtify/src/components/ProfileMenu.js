@@ -1,6 +1,7 @@
 import React from 'react'
 
-const ProfileMenu = (props) => {
+const ProfileMenu = () => {
+
   return (
     <nav className="menu">
       <button>
