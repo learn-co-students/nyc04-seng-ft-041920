@@ -1,24 +1,78 @@
 import React from 'react'
 
 class NewAlbum extends React.Component {
+  state = {
+    name: "",
+    image: "",
+    genre: "Cats",
+  }
+
+  // handleNameChange = event => {
+  //   this.setState({
+  //     name: event.target.value
+  //   })
+  // }
+
+  // handleImageChange = event => {
+  //   this.setState({
+  //     image: event.target.value
+  //   })
+  // }
+
+  handleInputChange = event => {
+    const inputName = event.target.name
+    // [inputName] will evaluate the variable inputName
+    // so if inputName is "image", it will use the string "image" as the key
+    this.setState({
+      [inputName]: event.target.value
+    })
+  }
+
+  handleSubmit = event => {
+    event.preventDefault() // remember to do this!
+
+    // spread operator - copy the key/value pairs from state into a new object
+    // and add inLibrary: false
+    const bodyData = {
+      ...this.state,
+      inLibrary: false
+    }
+
+    // mutates state! 
+    // this.state.inLibrary = false
+
+    console.log(bodyData)
+
+    fetch("http://localhost:3001/albums", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(bodyData)
+    })
+      .then(r => r.json())
+      .then(newAlbum => {
+        // pessimitic rendering 
+        this.props.handleAddAlbum(newAlbum)
+      })
+  }
 
   render() {
+    console.log("in NewAlbum, props", this.props)
+    // console.log("NewAlbum state", this.state)
     return (
       <div className="form-container">
         <h2>New Album</h2>
 
-        <form>
+        <form onSubmit={this.handleSubmit}>
           <label htmlFor="name">Album Name</label>
-
-          <input type="text" name="name" />
+          <input type="text" name="name" onChange={this.handleInputChange} value={this.state.name} />
 
           <label htmlFor="image">Image</label>
-
-          <input type="text" name="image" />
+          <input type="text" name="image" onChange={this.handleInputChange} value={this.state.image} />
 
           <label htmlFor="genre">Genre</label>
-
-          <select name="genre">
+          <select name="genre" onChange={this.handleInputChange} value={this.state.genre}>
             <option value="Cats">Cats</option>
             <option value="Dogs">Dogs</option>
             <option value="Birds">Birds</option>

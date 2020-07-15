@@ -6,7 +6,6 @@ class AlbumsContainer extends React.Component {
 
   state = {
     selectedGenre: "All",
-    albums: [],
     startIndex: 0
   }
 
@@ -14,15 +13,6 @@ class AlbumsContainer extends React.Component {
     this.setState({
       selectedGenre: genre
     })
-  }
-
-  handleFetchClick = () => {
-    fetch("http://localhost:3001/albums")
-      .then(r => r.json())
-      .then(albumsArray => {
-        // set state will make the component re-render
-        this.setState({ albums: albumsArray })
-      })
   }
 
   handleDecreaseIndex = () => {
@@ -35,9 +25,9 @@ class AlbumsContainer extends React.Component {
 
   filterAlbums() {
     if (this.state.selectedGenre === "All") {
-      return this.state.albums
+      return this.props.albums
     } else {
-      return this.state.albums.filter(album => album.genre === this.state.selectedGenre)
+      return this.props.albums.filter(album => album.genre === this.state.selectedGenre)
     }
   }
 
@@ -58,11 +48,8 @@ class AlbumsContainer extends React.Component {
   render() {
     console.log("in AlbumContainer, state:", this.state)
 
-    const { selectedGenre, albums, startIndex } = this.state
-
-    if (albums.length === 0) {
-      return <button onClick={this.handleFetchClick}>Fetch albums</button>
-    }
+    const { selectedGenre, startIndex } = this.state
+    const { albums } = this.props
 
     return (
       <div>

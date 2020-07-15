@@ -12,6 +12,7 @@ class Logo extends React.Component {
   handleLogoClick = () => {
     if (!this.state.playing) {
       this.dogsOut.play()
+      this.dogsOut.loop = true
       document.body.classList.add("party-time")
     } else {
       this.dogsOut.pause()
