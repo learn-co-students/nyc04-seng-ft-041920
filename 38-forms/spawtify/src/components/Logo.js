@@ -11,7 +11,6 @@ class Logo extends React.Component {
 
   handleLogoClick = () => {
     if (!this.state.playing) {
-      this.dogsOut.currentTime = 18.5
       this.dogsOut.play()
       document.body.classList.add("party-time")
     } else {
