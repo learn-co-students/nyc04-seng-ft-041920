@@ -5,7 +5,6 @@ Component Lifecycle Methods
 - [ ] Write methods that interact with data at different points throughout a component's life
 - [ ] Identify the most-used Lifecycle Methods
 - [ ] Explain why we `fetch` data using `componentDidMount`
-- [ ] Identify problems caused by asynchronicity in React
 
 ## Outline
 

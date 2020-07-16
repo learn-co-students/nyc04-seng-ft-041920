@@ -16,7 +16,7 @@ class LifeCycleApp extends React.Component {
     return (
       <div>
         <button onClick={this.toggle}>{this.state.showChildren ? "Unmount" : "Mount"} App</button>
-        {this.state.showChildren && <Parent name="parent" />}
+        {this.state.showChildren ? <Parent name="parent" /> : null}
       </div>
     )
   }
@@ -25,5 +25,11 @@ class LifeCycleApp extends React.Component {
 export default LifeCycleApp;
 
 // constructor - parent 
+// render - parent 
 // constructor - child 
+// render - child 
 // constructor - grandchild 
+// render - grandchild 
+// componentDidMount - grandchild 
+// componentDidMount - child 
+// componentDidMount - parent 

@@ -10,6 +10,10 @@ class Album extends React.Component {
 
   dogsOut = new Audio(dogs)
 
+  componentWillUnmount() {
+    this.dogsOut.pause()
+  }
+
   handlePlayClick = () => {
     if (!this.state.playing) {
       this.dogsOut.play()

@@ -8,7 +8,20 @@ import NewAlbum from './NewAlbum';
 class App extends React.Component {
   state = {
     albums: [],
-    page: "home"
+    page: "home",
+    loaded: false
+  }
+
+  componentDidMount() {
+    fetch("http://localhost:3001/albums")
+      .then(r => r.json())
+      .then(albumsArray => {
+        // set state will make the component re-render
+        this.setState({
+          albums: albumsArray,
+          loaded: true
+        })
+      })
   }
 
   addAlbum = album => {
@@ -19,15 +32,6 @@ class App extends React.Component {
 
   changePage = page => {
     this.setState({ page })
-  }
-
-  handleFetchClick = () => {
-    fetch("http://localhost:3001/albums")
-      .then(r => r.json())
-      .then(albumsArray => {
-        // set state will make the component re-render
-        this.setState({ albums: albumsArray })
-      })
   }
 
   renderPage() {
@@ -44,8 +48,7 @@ class App extends React.Component {
         <Sidebar page={this.state.page} handleMenuClick={this.changePage} />
         <ProfileMenu />
         <main>
-          <button onClick={this.handleFetchClick}>Fetch albums</button>
-          {this.renderPage()}
+          {this.state.loaded ? this.renderPage() : <h1>Loading...</h1>}
         </main>
       </div>
     );
