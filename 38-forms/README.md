@@ -275,7 +275,7 @@ removeComment = commentId => {
 
 ```js
 updateComment = updatedComment => {
-  // filter to return a new array with the comment we don't want removed
+  // map to return a new array
   const updatedComments = this.state.comments.map(comment => {
     if (comment.id === updatedComment.id) {
       // if the comment in state is the one we want to update, replace it with the new updated object
