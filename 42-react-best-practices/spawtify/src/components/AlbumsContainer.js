@@ -53,7 +53,7 @@ class AlbumsContainer extends React.Component {
     const { albums } = this.props
 
     return (
-      <div>
+      <>
         <GenrePicker
           handleSelectedGenre={this.handleSelectedGenre}
           selectedGenre={selectedGenre}
@@ -67,7 +67,7 @@ class AlbumsContainer extends React.Component {
             <button onClick={this.handleIncreaseIndex} disabled={albums.length - startIndex <= 8}>Next</button>
           </div>
         )}
-      </div>
+      </>
     )
   }
 }

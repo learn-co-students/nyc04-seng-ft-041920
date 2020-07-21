@@ -1,22 +1,45 @@
 import React from 'react'
 
 class NewAlbum extends React.Component {
+
+  // constructor(props) {
+  //   super(props)
+
+  //   this.state = {
+  //     name: "",
+  //     image: "",
+  //     genre: "Cats",
+  //   }
+
+  //   this.handleSubmit.bind(this)
+  // }
+
   state = {
     name: "",
     image: "",
     genre: "Cats",
   }
 
-  handleInputChange = event => {
-    const inputName = event.target.name
-    // [inputName] will evaluate the variable inputName
-    // so if inputName is "image", it will use the string "image" as the key
+  // handleInputChange = (name, event) => {
+  //   const inputName = name
+  //   // [inputName] will evaluate the variable inputName
+  //   // so if inputName is "image", it will use the string "image" as the key
+  //   this.setState({
+  //     [inputName]: event.target.value
+  //   })
+  // }
+
+  // this.handleInputHigherOrderFn("name")
+  // return (event) => {}
+  // javascript black magic!
+  // arrow fn binding; arrow fn implict return; higher order fn (fn that returns a fn); closure
+  handleInputHigherOrderFn = name => event => {
     this.setState({
-      [inputName]: event.target.value
+      [name]: event.target.value
     })
   }
 
-  handleSubmit = event => {
+  handleSubmit(event) {
     event.preventDefault() // remember to do this!
 
     // spread operator - copy the key/value pairs from state into a new object
@@ -49,13 +72,13 @@ class NewAlbum extends React.Component {
 
         <form onSubmit={this.handleSubmit} className="form">
           <label htmlFor="name">Album Name</label>
-          <input type="text" name="name" onChange={this.handleInputChange} value={this.state.name} />
+          <input type="text" name="somethingrandom1" onChange={this.handleInputHigherOrderFn("name")} value={this.state.name} />
 
           <label htmlFor="image">Image</label>
-          <input type="text" name="image" onChange={this.handleInputChange} value={this.state.image} />
+          <input type="text" name="somethingrandom2" onChange={this.handleInputHigherOrderFn("image")} value={this.state.image} />
 
           <label htmlFor="genre">Genre</label>
-          <select name="genre" onChange={this.handleInputChange} value={this.state.genre}>
+          <select name="somethingrandom3" onChange={this.handleInputHigherOrderFn("genre")} value={this.state.genre}>
             <option value="Cats">Cats</option>
             <option value="Dogs">Dogs</option>
             <option value="Birds">Birds</option>

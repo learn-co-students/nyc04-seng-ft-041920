@@ -7,18 +7,34 @@ class Album extends React.Component {
     playing: false
   }
 
-  handlePlayClick = () => {
+  handlePlayClick = (id) => {
     this.setState(prevState => ({
       playing: !prevState.playing
     }))
   }
 
   handleUpdateLibrary = () => {
+    // not best practice!
+    // this.setState({
+    //   inLibrary: !this.state.inLibrary
+    // })
+
+    // calculate next state based on previous state
+    // prevState is the argument to the callback
+    // it's an object that all our previous state in it
+    console.log("before", this.state)
+
     this.setState(prevState => {
       return {
         inLibrary: !prevState.inLibrary
       }
+    }, () => {
+      // setState is async
+      console.log("after", this.state)
     })
+
+
+
   }
 
   render() {

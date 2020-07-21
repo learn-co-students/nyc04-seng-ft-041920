@@ -82,7 +82,6 @@ button:disabled {
   font-size: 2rem;
   font-weight: bold;
   left: 0.5rem;
-  transition: all 0.3s;
   color: var(--white);
   background-color: transparent;
 }
@@ -95,7 +94,6 @@ button:disabled {
 .side-bar .burger::after {
   content: "|";
   display: inline-block;
-  transition: all 0.3s;
   opacity: 1;
 }
 
