@@ -20,6 +20,15 @@ const ToDoCard = (props) => {
       })
   }
 
+  const deleteTodo = () => {
+    fetch(`http://localhost:3000/todos/${props.id}`, {
+      method: "DELETE",
+    })
+
+    // optimistic rendering
+    props.removeTodo(props.id)
+  }
+
   return (
     <div className="ui card">
       <div className="content">
@@ -29,7 +38,7 @@ const ToDoCard = (props) => {
             If the button is under Complete Container, button should be orange and text should say Incomplete 
             */}
         <button onClick={updateTodo} className={className}>{props.completed ? "Incomplete" : "Complete"}</button>
-        <button onClick={null} className="ui button red">Delete</button>
+        <button onClick={deleteTodo} className="ui button red">Delete</button>
       </div>
 
     </div>

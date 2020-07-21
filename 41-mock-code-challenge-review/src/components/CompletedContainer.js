@@ -11,6 +11,7 @@ const CompletedContainer = (props) => {
                 title={todo.title}
                 completed={todo.completed}
                 toggleComplete={props.toggleComplete}
+                removeTodo={props.removeTodo}
             />
         )
     }
