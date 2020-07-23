@@ -12,14 +12,29 @@ React Router
 - [ ] **Bonus** Use the `withRouter` HOC to wrap give child components access to the state of the router
 - [ ] **Bonus** Use hooks like `useHistory` to access the state of the router
 
+## Routes
+- [ ] "/albums"     - Albums index (**bonus** use query params for search)
+- [ ] "/albums/:id" - Albums show
+- [ ] "/albums/new" - Create new album
+- [ ] "/favorites"  - Favorite albums
+- [ ] "/login"      - Login page
 
 ## Lecture Notes
 
 ## SPAs
 
 - Benefits: 
+- don't have to think about routes (pro + con)
+- faster - don't have to wait for that full page refresh
+- load all the data upfront, so faster
 
 - Challenges 
+- initial load can be slow
+- rendering logic can be tedious
+- async is hard! loading state, error states
+- miss that custom url
+- back button... navigating between pages
+
 
 
 

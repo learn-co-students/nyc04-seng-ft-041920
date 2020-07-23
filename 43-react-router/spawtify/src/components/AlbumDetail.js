@@ -7,7 +7,9 @@ class AlbumDetail extends React.Component {
   }
 
   componentDidMount() {
-    fetch(`http://localhost:3001/albums/2`)
+    console.log(this.props)
+    const id = this.props.match.params.id
+    fetch(`http://localhost:3001/albums/${id}`)
       .then(r => r.json())
       .then(album => {
         this.setState({ album })
@@ -31,6 +33,7 @@ class AlbumDetail extends React.Component {
   }
 
   render() {
+
     if (!this.state.album) return <h1>Loading...</h1>
 
     const { image, name, genre, videoId, favorite } = this.state.album

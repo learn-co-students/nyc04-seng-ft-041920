@@ -32,13 +32,16 @@ class NewAlbum extends React.Component {
       body: JSON.stringify(bodyData)
     })
       .then(r => r.json())
-      .then(() => {
+      .then(newAlbum => {
         // TODO: redirect!
-        this.props.setPage("detail")
+        this.props.history.push(`/albums/${newAlbum.id}`)
+
+        // this.addAlbum(newAlbum)
       })
   }
 
   render() {
+    console.log(this.props)
     return (
       <div className="form-container">
         <h2>New Album</h2>

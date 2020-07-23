@@ -1,4 +1,5 @@
 import React from 'react';
+import { Switch, Route } from 'react-router-dom'
 
 import Sidebar from './Sidebar'
 import ProfileMenu from './ProfileMenu';
@@ -69,7 +70,34 @@ class App extends React.Component {
         <Sidebar page={this.state.page} setPage={this.setPage} setSearch={this.setSearch} />
         <ProfileMenu setPage={this.setPage} />
         <main>
-          {this.renderPage()}
+          <Switch>
+            <Route exact path="/albums" render={() => (
+              <AlbumsContainer
+                onlyFavorites={false}
+                searchTerm={this.state.searchTerm}
+                updateAlbum={this.updateAlbum}
+                setPage={this.setPage}
+              />
+            )} />
+            <Route exact path="/favorites" render={routeProps => (
+              <AlbumsContainer
+                {...routeProps}
+                onlyFavorites={true}
+                searchTerm={this.state.searchTerm}
+                updateAlbum={this.updateAlbum}
+                setPage={this.setPage}
+              />
+            )} />
+            <Route path="/albums/new" render={routeProps => <NewAlbum {...routeProps} />} />
+
+            {/* <Route path="/albums/:id" component={AlbumDetail} /> */}
+
+            <Route path="/albums/:id" render={routeProps => (
+              <AlbumDetail {...routeProps} myCustomProp={"anything"} searchTerm={this.state.searchTerm} />
+            )} />
+
+            <Route path="/login" render={() => <Login />} />
+          </Switch>
         </main>
       </div>
     );

@@ -1,22 +1,23 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 
 const SideMenu = ({ page, setPage }) => {
   return (
     <ul>
       <li>
-        <span className={`link${page === "home" ? " active" : ""}`} onClick={() => setPage("home")}>
+        <NavLink to="/albums" className="link" exact>
           <span role="img" aria-label="home">🏚</span>Home
-        </span>
+        </NavLink>
       </li>
       <li>
-        <span className={`link${page === "favorites" ? " active" : ""}`} onClick={() => setPage("favorites")}>
+        <NavLink to="/favorites" className="link">
           <span role="img" aria-label="heart">♥️</span>Favorites
-        </span>
+        </NavLink>
       </li>
       <li>
-        <span className={`link${page === "new" ? " active" : ""}`} onClick={() => setPage("new")}>
+        <NavLink to="/albums/new" className="link">
           <span role="img" aria-label="plus">➕</span>New Album
-        </span>
+        </NavLink>
       </li>
     </ul>
   )
