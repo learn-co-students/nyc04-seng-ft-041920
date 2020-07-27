@@ -1,5 +1,5 @@
 import React from 'react'
-import PokemonCard from './PokemonCard'
+import PokemonCard from './PokemonCardHook'
 import { Card } from 'semantic-ui-react'
 
 const PokemonCollection = ({ pokemons }) => {

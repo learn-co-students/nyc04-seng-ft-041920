@@ -41,7 +41,6 @@ const updateFavicon = imgUrl => {
 export const useEmojiFavicon = emoji => {
   useEffect(() => {
     if (emoji.length) {
-      console.log("emoji updating")
       // create image
       const imgUrl = createImage(emoji)
 

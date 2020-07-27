@@ -1,13 +1,13 @@
 import React from 'react'
-import PokemonPage from './components/PokemonPage'
+import PokemonPage from './components/PokemonPageHook'
 import './App.css'
-// import Examples from './examples/components/Examples'
+import Examples from './examples/components/Examples'
 
 const App = () => {
 
   return (
     <div className="App">
-      {/* <Examples /> */}
+      <Examples />
       <PokemonPage />
     </div>
   )
