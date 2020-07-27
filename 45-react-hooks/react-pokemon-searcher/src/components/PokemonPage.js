@@ -1,7 +1,7 @@
 import React from 'react'
 import { Header, Dimmer, Loader, Pagination, Container } from 'semantic-ui-react'
 import PokemonCollection from './PokemonCollection'
-import PokemonForm from '../examples/components/PokemonFormHook'
+import PokemonForm from './PokemonForm'
 import Search from './Search'
 import { getPagedPokemon } from '../api'
 
